@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block body %}
+
+    <div class="container wrapper flex-grow-1 mt-5 bg-dark text-light">
+        <h1 class="my-4">{% trans 'Users' %}</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr class="bg-dark text-light">
+                    <th>ID</th>
+                    <th>{% trans 'Username' %}</th>
+                    <th>{% trans 'Full name' %}</th>
+                    <th>{% trans 'Created at' %}</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+            <tr class="bg-dark">
+                <td class="text-light">{{ user.id }}</td>
+                <td class="text-light">{{ user.username }}</td>
+                <td class="text-light">{{ user.get_fullname }}</td>
+                <td class="text-light">{{ user.created_at|date:"d.m.Y " }}<br>{{ user.created_at|date:"H:i" }}</td>
+                <td class="text-light">
+                    <a class="link-secondary" href="{% url 'users_update' user.id %}">{% trans 'Edit' %}</a>
+                    <br>
+                    <a class="link-danger" href="{% url 'users_delete' user.id %}">{% trans 'Delete' %}</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

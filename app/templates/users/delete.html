@@ -1,0 +1,8 @@
+{% extends 'delete.html' %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block title %}{% trans 'Delete user' %}{% endblock %}
+
+{% block content %}{{ user.get_fullname }}{% endblock %}
