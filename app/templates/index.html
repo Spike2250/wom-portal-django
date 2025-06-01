@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+<div class="container wrapper flex-grow-1 mt-5">
+    <div class="bg-dark text-light center-block">
+        <div class="card-body p-5 text-center">
+            {% if request.user.is_authenticated %}
+                <p class="display-4 mt-5 mb-4">
+                    {% trans 'Hello, ' %}
+                    <span class="text-info">{{ user }}</span>
+                </p>
+                <p class="lead mb-0">{% trans "It's been a long time." %}</p>
+                <p class="mb-0">{% trans "How you doin'?" %}</p>
+            {% else %}
+                <p class="display-4 mt-5 mb-4">{% trans 'Hello there' %}</p>
+                <p class="mx-auto w-50">
+                <p class="lead">{% trans 'This is the Weather Checking Application,' %}</p>
+                <p class="text-center mx-auto w-75">
+                    {% trans 'I give you the opportunity to find out the weather in the specified city.' %}
+                    <br>
+                    {% trans 'Registration and authentication are required to work with my system.' %}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

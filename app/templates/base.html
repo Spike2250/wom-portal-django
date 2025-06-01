@@ -1,0 +1,27 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% trans 'Weather checking' %}</title>
+        {% bootstrap_css %}
+    </head>
+    <body class="d-flex flex-column min-vh-100 bg-dark text-light" data-bs-theme="dark">
+        <header>
+            {% include 'navbar.html' %}
+        </header>
+        <main class="container wrapper flex-grow-1">
+            {% bootstrap_messages %}
+            {% block body %}
+            {% endblock %}
+        </main>
+        <footer>
+            {% include 'footer.html' %}
+        </footer>
+    </body>
+</html>

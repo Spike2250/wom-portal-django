@@ -1,0 +1,45 @@
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+<nav class="navbar navbar-dark navbar-expand-lg mb-3" style="background-color: #2a2f47; padding-left: 4em;" data-bs-theme="dark">
+    <a class="navbar-brand text-white" href="{% url 'home' %}">{% trans 'Weather Checking' %}</a>
+    <button class="navbar-toggler" data-bs-toggle="offcanvas" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link text-light-emphasis" href="{% url 'users' %}">{% trans 'Users' %}</a>
+            </li>
+            {% if request.user.is_authenticated %}
+
+            {% endif %}
+        </ul>
+
+        <ul class="navbar-nav" style="padding-left: 10em;">
+            {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <p class="nav-link disabled text-light-emphasis user-select-none my-0">{% trans 'Current user: '%}</p>
+                </li>
+                <li class="nav-item">
+                    <p class="nav-link text-info user-select-none my-0">{{ user.username }}</p>
+                </li>
+                <li class="nav-item">
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        {% trans 'Sign out' as button %}
+                        {% bootstrap_button button button_type="submit" button_class="btn btn-outline-secondary" %}
+                    </form>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-light-emphasis" href="{% url 'login' %}">{% trans 'Sign in' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light-emphasis" href="{% url 'users_create' %}">{% trans 'Sign up' %}</a>
+                </li>
+            {% endif %}
+        </ul>
+
+    </div>
+</nav>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block body %}
+
+    <div class="container wrapper flex-grow-1 mt-5 bg-dark text-light w-50">
+        <h1 class="my-4 text-center">{% block title %}{% endblock %}</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div class="form-group text-center mt-4 p-3">
+                {% block button %}{% endblock %}
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
