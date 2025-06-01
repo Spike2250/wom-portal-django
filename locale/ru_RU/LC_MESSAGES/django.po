@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 18:40+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\app\templates\404.html:12
+msgid "This page is not found!"
+msgstr "Такой страницы не найдено!"
+
+#: .\app\templates\404.html:13
+msgid "Go to main page"
+msgstr "Вернуться на главную страницу"
+
+#: .\app\templates\base.html:11
+msgid "My Application"
+msgstr "Мое приложение"
+
+#: .\app\templates\delete.html:16
+msgid "Are you sure you want to delete "
+msgstr "Вы уверены, что хотите удалить "
+
+#: .\app\templates\delete.html:22
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: .\app\templates\index.html:11
+msgid "Hello, "
+msgstr "Привет, "
+
+#: .\app\templates\index.html:14
+msgid "It's been a long time."
+msgstr "Давненько ты сюда не заглядывал"
+
+#: .\app\templates\index.html:15
+msgid "How you doin'?"
+msgstr "Как дела?"
+
+#: .\app\templates\index.html:17
+msgid "Hello there"
+msgstr "Приветствую!"
+
+#: .\app\templates\index.html:19
+msgid "This is the My Application,"
+msgstr "Это мое приложение"
+
+#: .\app\templates\index.html:21
+msgid ""
+"Here will be a brief description of the functionality of my application."
+msgstr "Здесь будет краткое описание фукционала моего приложения."
+
+#: .\app\templates\index.html:23
+msgid "Registration and authentication are required to work with my system."
+msgstr "Для работы необходимо зарегистрироваться и авторизоваться."
+
+#: .\app\templates\navbar.html:5
+msgid "Application Name"
+msgstr "Название приложения"
+
+#: .\app\templates\navbar.html:12 .\app\templates\users\users.html:9
+msgid "Users"
+msgstr "Пользователи"
+
+#: .\app\templates\navbar.html:22
+msgid "Current user: "
+msgstr "Пользователь: "
+
+#: .\app\templates\navbar.html:30
+msgid "Sign out"
+msgstr "Выход"
+
+#: .\app\templates\navbar.html:36 .\app\templates\users\login.html:6
+msgid "Sign in"
+msgstr "Вход"
+
+#: .\app\templates\navbar.html:39 .\app\templates\users\create.html:6
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: .\app\templates\users\create.html:10
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: .\app\templates\users\delete.html:6
+msgid "Delete user"
+msgstr "Удаление пользователя"
+
+#: .\app\templates\users\login.html:9
+msgid "Enter"
+msgstr "Войти"
+
+#: .\app\templates\users\update.html:6
+msgid "Update user"
+msgstr "Изменение пользователя"
+
+#: .\app\templates\users\update.html:9
+msgid "Update"
+msgstr "Изменить"
+
+#: .\app\templates\users\users.html:14
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\app\templates\users\users.html:15
+msgid "Full name"
+msgstr "Полное имя"
+
+#: .\app\templates\users\users.html:16
+msgid "Created at"
+msgstr "Дата создания"
+
+#: .\app\templates\users\users.html:28
+msgid "Edit"
+msgstr "Изменить"
+
+#: .\app\templates\users\users.html:30
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\app\users\forms.py:26
+msgid "Password"
+msgstr "Пароль"
+
+#: .\app\users\forms.py:30
+msgid "Confirm password"
+msgstr "Подтверждение пароля"
+
+#: .\app\users\views.py:23
+msgid "You are logged in"
+msgstr "Вы залогинены"
+
+#: .\app\users\views.py:34
+msgid "You are logged out"
+msgstr "Вы разлогинены"
+
+#: .\app\users\views.py:46
+msgid "User is successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: .\app\users\views.py:57
+msgid "User is successfully updated"
+msgstr "Пользователь успешно изменен"
+
+#: .\app\users\views.py:67
+msgid "User successfully deleted"
+msgstr "Пользователь успешно удален"
+
+#: .\app\utils.py:17
+msgid "You are not logged in! Please log in."
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: .\app\utils.py:43
+msgid "You have no rights to change another user."
+msgstr "У вас нет прав для изменения другого пользователя."
