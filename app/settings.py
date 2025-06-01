@@ -18,6 +18,10 @@ import dj_database_url
 
 load_dotenv()
 
+MAIN_APP_NAME = 'app'
+# in Manage.py need to change manually
+
+
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -50,9 +54,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
-    'app',
-    'app.users',
     'django_filters',
+    MAIN_APP_NAME,
+    f'{MAIN_APP_NAME}.users',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
 ]
 
-ROOT_URLCONF = 'app.urls'
+ROOT_URLCONF = f'{MAIN_APP_NAME}.urls'
 
 TEMPLATES = [
     {

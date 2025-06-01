@@ -17,8 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from app.users.views import UserLoginView, UserLogoutView
-from app.views import IndexView
+from .views import IndexView
+from .users.views import UserLoginView, UserLogoutView
 
 
 urlpatterns = [
