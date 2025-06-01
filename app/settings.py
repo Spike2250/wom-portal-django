@@ -88,7 +88,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'app.wsgi.application'
+WSGI_APPLICATION = f'{MAIN_APP_NAME}.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.onrender.com'
@@ -127,8 +127,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
