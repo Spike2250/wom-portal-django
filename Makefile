@@ -1,6 +1,6 @@
 
 install:
-	poetry install
+	poetry install --no-root
 
 dev:
 	poetry run python manage.py runserver
