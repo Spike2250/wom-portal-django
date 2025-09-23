@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "test-task-o-complex"
+name = "wom-django"
 version = "0.1.0"
 description = ""
 authors = ["Shilov Ilia <shilov.spike2250@yandex.ru>"]
