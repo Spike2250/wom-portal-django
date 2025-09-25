@@ -26,7 +26,7 @@ class WorkplaceCreateView(AuthorizationCheckMixin,
                           CreateView):
     form_class = WorkplaceForm
     template_name = 'workplaces/create.html'
-    success_url = reverse_lazy('workplace')
+    success_url = reverse_lazy('workplaces')
     success_message = _('Workplace successfully created')
 
     def form_valid(self, form):
@@ -41,7 +41,7 @@ class WorkplaceUpdateView(AuthorizationCheckMixin,
     model = Workplace
     form_class = WorkplaceForm
     template_name = 'workplaces/update.html'
-    success_url = reverse_lazy('workplace')
+    success_url = reverse_lazy('workplaces')
     success_message = _('Workplace successfully updated')
 
 
