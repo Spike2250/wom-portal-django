@@ -7,5 +7,4 @@ class WorkplaceForm(forms.ModelForm):
         model = Workplace
         fields = [
             'name',
-            'creator',
         ]
