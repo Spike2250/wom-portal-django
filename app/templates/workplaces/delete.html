@@ -1,0 +1,8 @@
+{% extends 'delete.html' %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block title %}{% trans 'Delete work place' %}{% endblock %}
+
+{% block content %}{{ workplace.name }}{% endblock %}

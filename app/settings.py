@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'django_filters',
     MAIN_APP_NAME,
     f'{MAIN_APP_NAME}.users',
+    f'{MAIN_APP_NAME}.workplaces',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    f'{MAIN_APP_NAME}.middleware.CurrentUserMiddleware',
 ]
 
 ROOT_URLCONF = f'{MAIN_APP_NAME}.urls'
