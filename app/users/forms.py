@@ -1,5 +1,7 @@
 from django.contrib.auth.forms import (
-    UserCreationForm, AuthenticationForm, UserChangeForm
+    UserCreationForm,
+    AuthenticationForm,
+    UserChangeForm,
 )
 from django import forms
 from django.utils.translation import gettext as _
@@ -11,9 +13,11 @@ class UserCreateForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
-            'first_name',
-            'last_name',
             'username',
+            'email',
+            'last_name',
+            'first_name',
+            'patronymic',
             'password1',
             'password2',
         ]
@@ -34,9 +38,10 @@ class UserUpdateForm(UserChangeForm):
     class Meta:
         model = User
         fields = [
-            'first_name',
+            'email',
             'last_name',
-            'username',
+            'first_name',
+            'patronymic',
         ]
 
 
@@ -44,5 +49,6 @@ class LoginForm(AuthenticationForm):
     class Meta:
         model = User
         fields = [
-            'username', 'password1',
+            'username',
+            'password1',
         ]

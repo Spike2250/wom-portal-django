@@ -9,7 +9,7 @@
             {% if request.user.is_authenticated %}
                 <p class="display-4 mt-5 mb-4">
                     {% trans 'Hello, ' %}
-                    <span class="text-info">{{ user.get_fullname }}</span>
+                    <span class="text-info">{{ user.get_short_name }}</span>
                 </p>
                 <p class="lead mb-0">{% trans "It's been a long time." %}</p>
                 <p class="mb-0">{% trans "How you doin'?" %}</p>
