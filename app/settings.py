@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_bootstrap5',
     'django_filters',
+    'phonenumber_field',
     MAIN_APP_NAME,
     f'{MAIN_APP_NAME}.users',
     f'{MAIN_APP_NAME}.workplaces',
