@@ -10,15 +10,12 @@
         <ul class="navbar-nav mr-auto">
             {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-light-emphasis" href="{% url 'users' %}">{% trans 'Users' %}</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text-light-emphasis" href="{% url 'workplaces' %}">{% trans 'My work places' %}</a>
                 </li>
             {% endif %}
         </ul>
 
-        <ul class="navbar-nav" style="padding-left: 30em;">
+        <ul class="navbar-nav" style="padding-left: 25em;">
             {% if request.user.is_authenticated %}
                 <li class="nav-item">
                     <p class="nav-link disabled text-light-emphasis user-select-none my-0">{% trans 'Current user: '%}</p>
@@ -32,6 +29,9 @@
                         {% trans 'Sign out' as button %}
                         {% bootstrap_button button button_type="submit" button_class="btn btn-outline-secondary" %}
                     </form>
+                </li>
+                <li class="nav-item" style="padding-left: 5em;">
+                    <a class="nav-link text-light-emphasis" href="{% url 'users' %}">{% trans 'Users' %}</a>
                 </li>
             {% else %}
                 <li class="nav-item">
