@@ -14,6 +14,7 @@ class SetUpTestCase(TestCase):
             first_name='Obiwan',
             last_name='Kenobi',
             username='jedi',
+            email='someemail@mail.com'
         )
         self.user.set_password('qwerty777')
         self.user.save()
@@ -29,7 +30,7 @@ class UserCreateTestCase(SetUpTestCase):
 
         self.assertTrue(isinstance(user, User))
         self.assertEqual(user.first_name, 'Obiwan')
-        self.assertEqual(str(user), 'Obiwan Kenobi')
+        self.assertEqual(str(user), 'jedi')
 
         user_created_at = user.created_at.strftime('%Y-%m-%d')
         curr_time = datetime.now().strftime('%Y-%m-%d')
@@ -40,6 +41,7 @@ class UserCreateTestCase(SetUpTestCase):
             reverse_lazy('users_create'),
             {'first_name': 'Anakin',
              'last_name': 'Skywalker',
+             'email': 'someotheremail@mail.com',
              'username': 'redsaber',
              'password1': '456123987qwerty',
              'password2': '456123987qwerty'}
@@ -107,6 +109,7 @@ class UserUpdateTestCase(SetUpTestCase):
             reverse_lazy('users_update', kwargs={'pk': 1}),
             {'first_name': 'Obiwan',
              'last_name': 'Kenobi',
+             'email': 'emailexample@mail.com',
              'username': 'jedi_knight',
              'password1': 'qwerty777',
              'password2': 'qwerty777'}
@@ -126,6 +129,7 @@ class UserUpdateTestCase(SetUpTestCase):
             reverse_lazy('users_update', kwargs={'pk': 2}),
             {'first_name': 'Anakin',
              'last_name': 'Darth Vader',
+             'email': 'exampleemail@mail.com',
              'username': 'red_saber_is_good',
              'password1': 'q1w2e3r4t5',
              'password2': 'Q1w2e3r4T5'}
