@@ -8,17 +8,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link text-light-emphasis" href="{% url 'users' %}">{% trans 'Users' %}</a>
-            </li>
             {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-light-emphasis" href="{% url 'workplaces' %}">{% trans 'Work places' %}</a>
+                    <a class="nav-link text-light-emphasis" href="{% url 'users' %}">{% trans 'Users' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light-emphasis" href="{% url 'workplaces' %}">{% trans 'My work places' %}</a>
                 </li>
             {% endif %}
         </ul>
 
-        <ul class="navbar-nav" style="padding-left: 10em;">
+        <ul class="navbar-nav" style="padding-left: 30em;">
             {% if request.user.is_authenticated %}
                 <li class="nav-item">
                     <p class="nav-link disabled text-light-emphasis user-select-none my-0">{% trans 'Current user: '%}</p>
