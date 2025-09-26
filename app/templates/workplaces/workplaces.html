@@ -20,6 +20,9 @@
             <thead>
                 <tr class="bg-dark text-light">
                     <th>{% trans 'Workplace' %}</th>
+                    <th>{% trans 'Type' %}</th>
+                    <th>{% trans 'Profile' %}</th>
+                    <th>{% trans 'SubProfile' %}</th>
                     <th></th>
                 </tr>
             </thead>
@@ -33,6 +36,9 @@
                         {% bootstrap_button wp.name button_class="btn btn-outline-primary" href=open_url %}
                     </div>
                 </td>
+                <td class="text-light">{{ wp.get_type }}</td>
+                <td class="text-light">{{ wp.get_main_profile }}</td>
+                <td class="text-light">{{ wp.get_sub_profile }}</td>
                 <td class="text-light">
                     <a class="link-secondary" href="{% url 'workplace_update' wp.id %}">{% trans 'Edit' %}</a>
                     <br>
