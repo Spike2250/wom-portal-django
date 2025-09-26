@@ -5,16 +5,20 @@ from django.contrib.auth.forms import (
 )
 from django import forms
 from django.utils.translation import gettext as _
+from phonenumber_field.formfields import PhoneNumberField
 
 from .models import User
 
 
 class UserCreateForm(UserCreationForm):
+    phone = PhoneNumberField()
+
     class Meta:
         model = User
         fields = [
             'username',
             'email',
+            'phone',
             'last_name',
             'first_name',
             'patronymic',
@@ -24,6 +28,7 @@ class UserCreateForm(UserCreationForm):
 
 
 class UserUpdateForm(UserChangeForm):
+    phone = PhoneNumberField()
     password = None
 
     password1 = forms.CharField(
@@ -39,6 +44,7 @@ class UserUpdateForm(UserChangeForm):
         model = User
         fields = [
             'email',
+            'phone',
             'last_name',
             'first_name',
             'patronymic',
