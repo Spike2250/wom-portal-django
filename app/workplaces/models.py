@@ -37,20 +37,23 @@ class Workplace(models.Model):
     )
     creator = models.ForeignKey(
         User, blank=False, default=get_current_user, on_delete=models.PROTECT,
+        verbose_name=_('Workplace creator'),
     )
     name = models.CharField(
         max_length=255, unique=True, blank=False,
-        verbose_name=_('Name'),
+        verbose_name=_('Workplace name'),
     )
     type = models.CharField(
         max_length=2,
         choices=WorkplaceTypes,
         default=WorkplaceTypes.OUTPATIENT_TREATMENT,
+        verbose_name=_('Workplace type'),
     )
     profile = models.CharField(
         max_length=7,
         choices=WorkplaceProfile,
         default=WorkplaceProfile.THERAPEUTIC,
+        verbose_name=_('Workplace profile'),
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
