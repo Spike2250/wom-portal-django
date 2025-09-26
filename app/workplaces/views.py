@@ -1,4 +1,10 @@
-from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView
+from django.views.generic import (
+    CreateView,
+    UpdateView,
+    DeleteView,
+    DetailView,
+    ListView,
+)
 from django.contrib.messages.views import SuccessMessageMixin
 from django.utils.translation import gettext as _
 from django.urls import reverse_lazy
@@ -19,6 +25,11 @@ class WorkplacesView(AuthorizationCheckMixin,
     model = Workplace
     context_object_name = 'workplaces'
     template_name = 'workplaces/workplaces.html'
+
+    def get_queryset(self):
+        return Workplace.objects.filter(
+            creator=self.request.user
+        )
 
 
 class WorkplaceCreateView(AuthorizationCheckMixin,
